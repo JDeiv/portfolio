@@ -6,6 +6,8 @@ import Social from "@/components/Socials";
 import Link from "next/link";
 import Photo from "@/components/Photo";
 
+
+
 const Home = () => {
   return (
     <>

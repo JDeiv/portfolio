@@ -4,6 +4,9 @@ import React from "react";
 
 import { motion } from "framer-motion";
 import Image from "next/image";
+import App from "next/app";
+import ParticlesAnima from "./Particles";
+
 
 const Photo = () => {
   return (
@@ -36,8 +39,15 @@ const Photo = () => {
       </motion.div>
 
       {/* Circle around */}
+          <div className="w-2/3">
+          <ParticlesAnima />
+          </div>
+    </div>
+  );
+};
 
-      <motion.svg className="w-[300px] xl:w-[506px] h-[300px] xl:h-[306px]" 
+export default Photo;
+  {/* <motion.svg className="w-[300px] xl:w-[506px] h-[300px] xl:h-[306px]" 
       fill="transparent"
       viewBox="0 0 506 506"
       xmlns="https://www.w3.org/2000/svg"
@@ -58,9 +68,4 @@ const Photo = () => {
           strokeLinejoin="round"
         />
 
-      </motion.svg>
-    </div>
-  );
-};
-
-export default Photo;
+      </motion.svg> */}
