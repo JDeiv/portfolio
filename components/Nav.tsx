@@ -2,6 +2,8 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { MdWbSunny } from "react-icons/md";
+
 
 const links = [
   {
@@ -44,6 +46,7 @@ const Nav = () => {
           </Link>
         );
       })}
+      <button><MdWbSunny/></button>
     </nav>
   );
 };
