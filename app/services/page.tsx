@@ -5,22 +5,22 @@ const services = [
 {
   number: '01',
   tittle: 'Web Development',
-  text:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae esse porro dolor nam similique'
+  text:'Transformamos tus ideas en soluciones digitales. Ofrecemos desarrollo web completo, desde sitios informativos hasta aplicaciones complejas, utilizando las últimas tecnologías para garantizar rendimiento, seguridad y escalabilidad.'
 },
 {
   number: '02',
   tittle: 'Aumented Reality',
-  text:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae esse porro dolor nam similique'
+  text:'Sumérgete en el futuro con experiencias interactivas. Creamos aplicaciones de realidad aumentada que mejoran la interacción del usuario, proporcionando visualizaciones innovadoras y enriquecidas que integran el mundo digital con el real.'
 },
 {
   number: '03',
   tittle: 'Logo Desing',
-  text:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae esse porro dolor nam similique'
+  text:'Diseñamos sitios web atractivos y funcionales que capturan la esencia de tu marca. Nos enfocamos en la estética y la experiencia del usuario para asegurar que cada visita a tu sitio sea inolvidable y efectiva.'
 },
 {
   number: '04',
   tittle: 'UX/UI Desing',
-  text:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae esse porro dolor nam similique'
+  text:'Ponemos al usuario en el centro de nuestro diseño. Diseñamos interfaces intuitivas y atractivas que mejoran la usabilidad y la satisfacción del usuario, asegurando que cada interacción sea simple, agradable y eficiente.'
 },
 ]
 const Services = () => {

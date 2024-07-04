@@ -16,25 +16,26 @@ import {
 import { ScrollArea } from "@/components/ui/scroll-area";
 
 import { motion } from "framer-motion";
+import { title } from "process";
 
 //Our data on cv
 const personalInformation = {
   //Description About Me
   tittle: "Profile",
   description:
-    "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad, sequi corporis! Beatae enim officia sit eveniet excepturi soluta ",
+    "Ingeniero en Informática con un año de sólida experiencia en el medio de IT, enfocado en el desarrollo de soluciones innovadoras y eficientes. Mi pasión por la tecnología y mi compromiso con la excelencia me impulsan a buscar constantemente oportunidades para crecer profesionalmente y aportar valor en cada proyecto en el que participo.",
   info: [
     {
       fieldName: "Name",
-      fieldValue: "Nombre",
+      fieldValue: "David Imbaquingo",
     },
     {
       fieldName: "Phone",
-      fieldValue: "+593 9999999",
+      fieldValue: "+593 992651613",
     },
     {
       fieldName: "Experience",
-      fieldValue: "+ Years",
+      fieldValue: "+1 Years",
     },
     {
       fieldName: "Nacionality",
@@ -46,7 +47,7 @@ const personalInformation = {
     },
     {
       fieldName: "Email",
-      fieldValue: "email@gmail.com",
+      fieldValue: "jdavidimbaquingo@hotmail.com",
     },
     {
       fieldName: "Freelance",
@@ -60,53 +61,57 @@ const experiences = {
   icon: "/assets/resume/badge.svg",
   title: "My Experience",
   description:
-    "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad, sequi corporis! Beatae enim officia sit eveniet excepturi soluta ",
+    "Soy un desarrollador web apasionado con experiencia en la creación de proyectos frontend. He trabajado en una variedad de proyectos que van desde sitios web informativos hasta aplicaciones web interactivas, utilizando tecnologías modernas para ofrecer soluciones eficientes y atractivas ",
+    //Soy un desarrollador web apasionado con experiencia en la creación de proyectos frontend innovadores y funcionales. He trabajado en una variedad de proyectos que van desde sitios web informativos hasta aplicaciones web interactivas, utilizando tecnologías modernas para ofrecer soluciones eficientes y atractivas
   items: [
     {
-      company: "Nombre de Empresa1",
-      position: "Web Developer",
+      company: "Tecsago",
+      position: "IT Leader Support",
+      duration: "2023-2024",
+    },
+    {
+      company: "Tecsago",
+      position: "Web Develop",
       duration: "2020 - 2021",
     },
     {
-      company: "Nombre de Empresa2",
-      position: "Web Desing",
-      duration: "2020 - 2021",
-    },
-    {
-      company: "Nombre de Empresa3",
+      company: "Personal Projects",
       position: "3D Modeler",
       duration: "2020 - 2021",
     },
   ],
 };
 
+// education section
 const education = {
   icon: "/assets/resume/cap.svg",
   title: "My Education",
   description:
-    "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad, sequi corporis! Beatae enim officia sit eveniet excepturi soluta ",
+    "",
   items: [
     {
-      school: "Nombre de Institucion1",
-      degree: "IT",
-      duration: "2020 - 2021",
+      school: "Bootcamp Javascript",
+      degree: "Udemy Certificate",
+      duration: "2023",
     },
     {
-      school: "Curso Online",
-      degree: "IT",
-      duration: "2020 - 2021",
+      school: "Blender Udemy Courses",
+      degree: "Udemy Certificate",
+      duration: "2022",
     },
     {
-      school: "Bootcamp",
-      degree: "IT",
-      duration: "2020 - 2021",
+      school: "Realidad Aumentada con Unity Udemy Courses",
+      degree: "Udemy Certificate",
+      duration: "2020-2021",
     },
   ],
 };
+
+// skills section
 const skills = {
   title: "My Skills",
   description:
-    "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad, sequi corporis! Beatae enim officia sit eveniet excepturi soluta ",
+    "Mi pasión por la tecnología y mi compromiso con la excelencia me impulsan a seguir aprendiendo constantemente y buscar oportunidades para crecer profesionalmente.",
   skillList: [
     {
       icon: <FaHtml5 />,
@@ -142,7 +147,7 @@ const Resume = () => {
       className="min-h-[80px] flex items-center justify-center py-8 xl:py-0"
     >
       <div className="container mx-auto">
-        <Tabs defaultValue="experience" 
+        <Tabs defaultValue="experiences" 
         className="flex flex-col xl:flex-row gap-[60px]"
         >
           <TabsList className="flex flex-col w-full max-w-[380px] mx-auto xl:mx-0 gap-6">
@@ -217,7 +222,7 @@ const Resume = () => {
                     {personalInformation.info.map((item, index) => (
                       <div key={index} className="flex flex-col gap-2 shadow-xl container">
                         <p className="text-lg font-semibold text-acent">{item.fieldName}</p>
-                        <p className="text-sm">{item.fieldValue}</p>
+                        <p className="text-[12px]">{item.fieldValue}</p>
                       </div>
                     ))}
                   </div>

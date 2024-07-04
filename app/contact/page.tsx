@@ -21,7 +21,7 @@ const information = [
   },
   {
     name: "Email",
-    description: "imbauqingojefferson60@gmail.com",
+    description: "jdavidimbaquingo@hotmail.com",
     icon: <FaEnvelope />,
   },
   {
@@ -95,7 +95,7 @@ const Contact = () => {
             <form onSubmit={handleSubmit} className="flex flex-col gap-6 p-10 rounded-xl">
               <h3 className="text-4xl text-acent">Let's work together</h3>
               <p className="text-white/60">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio aliquid eum eius, sunt nostrum labore, asperiores consequuntur.
+                Send us your message and begin to create a new project.
               </p>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <Input name="firstName" type="text" placeholder="Firstname" value={formData.firstName} onChange={handleChange} />
@@ -131,7 +131,7 @@ const Contact = () => {
                       {item.icon}
                     </div>
                     <div className="flex-1">
-                      <span className="text-white">{item.name}</span>
+                      <span className="text-white font-bold">{item.name}</span>
                       <p>{item.description}</p>
                     </div>
                   </div>

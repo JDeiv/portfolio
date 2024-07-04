@@ -4,7 +4,7 @@ import React from "react";
 
 import { motion } from "framer-motion";
 import Image from "next/image";
-import App from "next/app";
+//import App from "next/app";
 import ParticlesAnima from "./Particles";
 
 
@@ -28,12 +28,12 @@ const Photo = () => {
           className="w-[298px] h-[298px] xl:w-[498px] xl:h-[498px] mix-blend-lighten"
         >
           <Image
-            src="/assets/avatar.png"
+            src="/assets/profile.jpg"
             priority
             quality={100}
             fill
             alt="foto de perfil"
-            className="object-contain"
+            className="object-contain rounded-xl shadow-xl"
           />
         </motion.div>
       </motion.div>

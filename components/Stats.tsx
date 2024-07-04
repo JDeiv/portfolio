@@ -13,7 +13,7 @@ const stats = [
   },
   {
     title: "Technologies used",
-    value: 2,
+    value: 7,
     
   }
 ];

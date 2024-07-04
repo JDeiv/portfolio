@@ -27,19 +27,19 @@ const projects = [
     number: "01",
     category: "frontend",
     title: "Project 1",
-    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+    description: "Desarrollo de Web Site a medida del cliente",
     technologies: [
       {
-        name: "React JS",
+        name: "React.JS",
       },
       {
-        name: "Next JS",
+        name: "Vite",
       },
       {
-        name: "Tailwind CSS",
+        name: "Typescript",
       },
       {
-        name: "JavaScript",
+        name: "TailwindCSS",
       },
       {
         name: "HTML5",
@@ -48,22 +48,16 @@ const projects = [
         name: "CSS3",
       },
     ],
-    images: "/assets/work/thumb1.png",
-    live: "",
-    github: "",
+    images: "/assets/work/First.png",
+    live: "https://tecsago.com/",
+    github: "https://github.com/ProyectoFD/proyecto/tree/david4",
   },
   {
     number: "02",
     category: "frontend",
     title: "Project 2",
-    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+    description: "Página web a medida del cliente",
     technologies: [
-      {
-        name: "React JS",
-      },
-      {
-        name: "Tailwind CSS",
-      },
       {
         name: "JavaScript",
       },
@@ -74,13 +68,21 @@ const projects = [
         name: "CSS3",
       },
     ],
-    images: "/assets/work/thumb2.png",
-    live: "",
-    github: "",
+    images: "/assets/work/second.png",
+    live: "https://www.grupolopezvallejo.com/",
+    github: "https://github.com/JDeiv/grupoAma",
   },
 ];
 
-const Work = () => {
+type Project = {
+  technologies: { name: string }[]; // Define la estructura de `technologies`
+};
+
+type Props = {
+  techLine: Project; // Propiedad `techLine` que debe cumplir con el tipo `Project`
+};
+
+const Work: React.FC<Props> = ({ techLine }) => {
   const [project, setProject] = useState(projects[0]);
 
   const handleSlideChange = (swiper: any) => {
@@ -89,6 +91,16 @@ const Work = () => {
     //update project store based on current slide index
     setProject(projects[slideIndex]);
   };
+
+  const chunkedTechnologies = project.technologies.reduce<string[][]>(
+    (acc, tech, index) => {
+      if (index % 5 === 0) acc.push([tech.name]);
+      // Crea un nuevo grupo de nombres cada 5 elementos
+      else acc[acc.length - 1].push(tech.name); // Agrega nombres al grupo actual
+      return acc;
+    },
+    []
+  );
   return (
     <>
       <motion.div
@@ -117,23 +129,28 @@ const Work = () => {
                 </h2>
                 {/* Project description */}
                 <p className="text-white/60">{project.description}</p>
-                <ul className="flex gap-4 border-b-2 pb-2 border-white/20">
-                  {project.technologies.map((item, index) => {
-                    return (
-                      <li key={index} className="text-xl text-acent ">
-                        {item.name}
-                        {/* remove the last comma*/}
-                        {index !== project.technologies.length - 1 && ","}
+                
+                {/* Technologies names */}
+                {chunkedTechnologies.map((group, groupIndex) => (
+                  <ul
+                    key={groupIndex}
+                    className="flex gap-4 border-b-2 pb-2 border-white/20"
+                  >
+                    {group.map((name, index) => (
+                      <li key={index} className="text-xl text-acent">
+                        {name}
+                        {/* remove the last comma */}
+                        {index !== group.length - 1 && ","}
                       </li>
-                    );
-                  })}
-                </ul>
+                    ))}
+                  </ul>
+                ))}
                 {/* border */}
                 <div></div>
                 {/* Buttons */}
                 <div className="flex items-center gap-4 p-3">
                   {/* Live project */}
-                  <Link href={project.live}>
+                  <Link href={project.live} target="_blank">
                     <TooltipProvider delayDuration={100}>
                       <Tooltip>
                         <TooltipTrigger className="w-[40px] h-[40px] rounded-full bg-white/5 flex justify-center items-center group">
@@ -146,7 +163,7 @@ const Work = () => {
                     </TooltipProvider>
                   </Link>
                   {/* Github Project */}
-                  <Link href={project.live}>
+                  <Link href={project.github} target="_blank">
                     <TooltipProvider delayDuration={100}>
                       <Tooltip>
                         <TooltipTrigger className="w-[40px] h-[40px] rounded-full bg-white/5 flex justify-center items-center group">
@@ -166,13 +183,13 @@ const Work = () => {
               <Swiper
                 spaceBetween={30}
                 slidesPerView={1}
-                className="xl:h-[520px] mb-12"
+                className="xl:h-[520px]  "
                 onSlideChange={handleSlideChange}
               >
                 {projects.map((project, index) => {
                   return (
                     <SwiperSlide key={index} className="w-full">
-                      <div className="h-[460px] relative group flex justife-center items-center bg-pink-50/30">
+                      <div className="h-[460px] relative group flex justife-center items-center bg-translucent">
                         {/* Overlay */}
                         <div className="border-4"></div>
                         {/* Images */}
@@ -181,21 +198,20 @@ const Work = () => {
                           src={project.images}
                           alt={project.title}
                           layout="fill"
-                          objectFit="cover"
+                          objectFit="contain"
                         />
                       </div>
                     </SwiperSlide>
                   );
                 })}
                 {/* Work Slide Buttons */}
-                <WorkSlideButtons containerStyles="flex gap-2 absolute right-0 
-                bottom-[calc(50%_-_22px)] xl:bottom-0 z-20 w-full justify-between xl:w-max
-                xl:justify-none " 
-                buttonStyles="hover:text-acent xl:text-acent xl:text-[30px] text-primary text-[50px] w-[44px]
-                h-[44px] flex justify-center items-center transition-all" 
-                >
-                </WorkSlideButtons>
-                
+                <WorkSlideButtons
+                  containerStyles="flex gap-2 absolute right-0 
+                bottom-[calc(50%_-_22px)] xl:bottom-12 z-20 w-full justify-between xl:w-max
+                xl:justify-none "
+                  buttonStyles="hover:text-acent xl:text-acent xl:text-[30px] text-primary text-[50px] w-[44px]
+                h-[44px] flex justify-center items-center transition-all"
+                ></WorkSlideButtons>
               </Swiper>
             </div>
           </div>

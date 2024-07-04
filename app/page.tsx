@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 
 import { Button } from "../components/ui/button";
@@ -8,6 +9,15 @@ import Photo from "@/components/Photo";
 import Stats from "@/components/Stats";
 
 const Home = () => {
+
+  const handleDownload = () => {
+    const link = document.createElement('a');
+    link.href = '/assets/resume/CV_David.pdf'; // Ruta al archivo en el directorio public
+    link.download = 'CV_David.pdf'; // Nombre del archivo a descargar
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
   return (
     <>
       <section className="h-full ">
@@ -20,13 +30,21 @@ const Home = () => {
               <h1 className="h1 mb-2">
                 Hello I'm <br /> <span className="text-acent">David Jeff</span>
               </h1>
+              {/* Description */}
               <p className="max-w-[500px] mb-1 text-white/80">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Perferendis asperiores tempora quia dolores
+                Soy un desarrollador front-end freelance en la
+                creación de interfaces de usuario intuitivas y responsivas.
+                Mi especialidad incluye el uso de tecnologías como
+                HTML, CSS, JavaScript, React, y TypeScript.
+                Me apasiona transformar ideas en experiencias web atractivas y
+                funcionales, garantizando la mejor usabilidad y rendimiento.
+                Mi enfoque se centra en el detalle y la calidad,
+                siempre buscando soluciones innovadoras y eficientes.
               </p>
+              {/* Buttons */}
               <div className="flex flex-col xl:flex-row items-center gap-4">
-                <Link href="/">
-                  <Button className="cursor-pointer flex items-center gap-2 hover:bg-acent hover:text-primary">
+                <Link href="assets/resume/CV_David.pdf" >
+                  <Button onClick={handleDownload} className="cursor-pointer flex items-center gap-2 hover:bg-acent hover:text-primary">
                     <span>Download CV</span>
                     <FiDownload className="text-xl" />
                   </Button>
@@ -45,6 +63,8 @@ const Home = () => {
               <Photo />
             </div>
           </div>
+
+          {/* Stats */}
           <div>
             <Stats />
           </div>
