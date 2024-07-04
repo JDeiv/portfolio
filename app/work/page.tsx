@@ -78,11 +78,11 @@ type Project = {
   technologies: { name: string }[]; // Define la estructura de `technologies`
 };
 
-type Props = {
-  techLine: Project; // Propiedad `techLine` que debe cumplir con el tipo `Project`
-};
+// type Props = {
+//   techLine: Project; Propiedad `techLine` que debe cumplir con el tipo `Project`
+// };
 
-const Work: React.FC<Props> = ({ techLine }) => {
+const Work = () => {
   const [project, setProject] = useState(projects[0]);
 
   const handleSlideChange = (swiper: any) => {
