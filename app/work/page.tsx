@@ -50,7 +50,7 @@ const projects = [
     ],
     images: "/assets/work/First.png",
     live: "https://tecsago.com/",
-    github: "https://github.com/ProyectoFD/proyecto/tree/david4",
+    github: "https://github.com/JDeiv/Tecsa",
   },
   {
     number: "02",
