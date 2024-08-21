@@ -1,6 +1,6 @@
 import { FC } from "react";
 import Link from 'next/link';
-import { FaGithub, FaLinkedinIn, FaYoutube, FaTwitter } from 'react-icons/fa';
+import { FaGithub, FaLinkedinIn, FaInstagram } from 'react-icons/fa';
 
 const socials = [
   {
@@ -9,15 +9,11 @@ const socials = [
   },
   {
     icon: <FaLinkedinIn />,
-    path: "https://linkedin.com/in/yourprofile"
+    path: "https://www.linkedin.com/in/david-jefferson7/"
   },
   {
-    icon: <FaYoutube />,
-    path: "https://youtube.com/yourchannel"
-  },
-  {
-    icon: <FaTwitter />,
-    path: "https://twitter.com/yourprofile"
+    icon: <FaInstagram />,
+    path: "https://www.instagram.com/jdeiv_7?igsh=b3R5d2o1djEyajE2"
   },
 ];
 

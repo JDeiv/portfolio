@@ -50,7 +50,7 @@ const personalInformation = {
       fieldValue: "imbaquingojefferson60@gmail.com",
     },
     {
-      fieldName: "Freelance",
+      fieldName: "Job",
       fieldValue: "Avaliable",
     },
   ],
@@ -89,6 +89,7 @@ const education = {
   description:
     "",
   items: [
+    
     {
       school: "Bootcamp Javascript",
       degree: "Udemy Certificate",
@@ -100,9 +101,14 @@ const education = {
       duration: "2022",
     },
     {
+      school: "Universidad Politécnica Estatal del Carchi",
+      degree: "Information Technology Engineer",
+      duration: "2021",
+    },
+    {
       school: "Realidad Aumentada con Unity Udemy Courses",
       degree: "Udemy Certificate",
-      duration: "2020-2021",
+      duration: "2020",
     },
   ],
 };
