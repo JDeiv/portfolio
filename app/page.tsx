@@ -12,8 +12,8 @@ const Home = () => {
 
   const handleDownload = () => {
     const link = document.createElement('a');
-    link.href = '/assets/resume/CV_David.pdf'; // Ruta al archivo en el directorio public
-    link.download = 'CV_David.pdf'; // Nombre del archivo a descargar
+    link.href = '/assets/resume/CV_David_Imbaquingo_.pdf'; // Ruta al archivo en el directorio public
+    link.download = 'CV_David_Imbaquingo.pdf'; // Nombre del archivo a descargar
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);

@@ -47,7 +47,7 @@ const personalInformation = {
     },
     {
       fieldName: "Email",
-      fieldValue: "jdavidimbaquingo@hotmail.com",
+      fieldValue: "imbaquingojefferson60@gmail.com",
     },
     {
       fieldName: "Freelance",
