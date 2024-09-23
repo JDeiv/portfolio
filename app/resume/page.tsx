@@ -5,6 +5,7 @@ import { FaHtml5, FaCss3, FaJs, FaReact, FaNodeJs } from "react-icons/fa";
 import { SiTailwindcss, SiNextdotjs } from "react-icons/si";
 
 import { BiLogoBlender } from "react-icons/bi";
+import { FaUnity,FaGithub  } from "react-icons/fa";
 
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
@@ -138,12 +139,20 @@ const skills = {
       name: "Tailwind Css",
     },
     {
+      icon: <FaGithub />,
+      name: "Git y Github",
+    },
+    {
       icon: <FaJs />,
       name: "Java Script",
     },
     {
       icon: <BiLogoBlender />,
       name: "Blender",
+    },
+    {
+      icon: <FaUnity />,
+      name: "Unity",
     },
   ],
 };

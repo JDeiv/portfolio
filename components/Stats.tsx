@@ -3,17 +3,17 @@ import React from "react";
 const stats = [
   {
     title: "Year of Experience",
-    value: 1.7,
+    value: 1.8,
     
   },
   {
     title: "Projects done",
-    value: 3,
+    value: 6,
     
   },
   {
     title: "Technologies used",
-    value: 7,
+    value: 8,
     
   }
 ];
