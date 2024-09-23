@@ -3,7 +3,8 @@
 import { motion } from "framer-motion";
 import React, { useState } from "react";
 
-import { Swiper, SwiperSlide } from "swiper/react";
+import { Swiper, SwiperSlide, } from "swiper/react";
+import { Autoplay } from 'swiper/modules';
 // import function to register Swiper custom elements
 // import { register } from 'swiper/element/bundle';
 // register Swiper custom elements
@@ -72,6 +73,90 @@ const projects = [
     live: "https://www.grupolopezvallejo.com/",
     github: "https://github.com/JDeiv/grupoAma",
   },
+  {
+    number: "03",
+    category: "Desarrollo Web WordPress",
+    title: "Project 3",
+    description: "Desarrollo y Actualización con CMS Wordpress",
+    technologies: [
+      {
+        name: "WordPress",
+      },
+      {
+        name: "WP Plugins",
+      },
+      {
+        name: "PHP",
+      },
+      {
+        name: "HTML5",
+      },
+      {
+        name: "CSS3",
+      },
+    ],
+    images: "/assets/work/ama.png",
+    live: "https://amaenergy.com.ec/",
+    github: "",
+  },
+  {
+    number: "04",
+    category: "Desarrollo Web WordPress",
+    title: "Project 4",
+    description: "Desarrollo y Actualización con CMS Wordpress",
+    technologies: [
+      {
+        name: "WordPress",
+      },
+      {
+        name: "WP Plugins",
+      },
+      {
+        name: "PHP",
+      },
+      {
+        name: "HTML5",
+      },
+      {
+        name: "CSS3",
+      },
+    ],
+    images: "/assets/work/valk.png",
+    live: "https://valk.com.ec/",
+    github: "",
+  },
+  {
+    number: "05",
+    category: "Augmented Reality App",
+    title: "Project 5",
+    description: "Desarrollo App Móvil Museo Bolívar",
+    technologies: [
+      {
+        name: "Unity",
+      },
+      {
+        name: "Blender",
+      },
+      {
+        name: "Vuforia",
+      },
+      {
+        name: "Quixel Mixer",
+      },
+      {
+        name: "Substance Painter",
+      },
+      {
+        name: "HTML5",
+      },
+      {
+        name: "CSS3",
+      },
+    ],
+    images: "/assets/work/museo.jpg",
+    live: "https://www.instagram.com/reel/DARiXk5p7it/?igsh=MXZsaHB6c2V1d253ZA==",
+    github: "",
+  }
 ];
 
 type Project = {
@@ -163,7 +248,7 @@ const Work = () => {
                     </TooltipProvider>
                   </Link>
                   {/* Github Project */}
-                  <Link href={project.github} target="_blank">
+                  {/* <Link href={project.github} target="_blank">
                     <TooltipProvider delayDuration={100}>
                       <Tooltip>
                         <TooltipTrigger className="w-[40px] h-[40px] rounded-full bg-white/5 flex justify-center items-center group">
@@ -174,7 +259,7 @@ const Work = () => {
                         </TooltipContent>
                       </Tooltip>
                     </TooltipProvider>
-                  </Link>
+                  </Link> */}
                 </div>
               </div>
             </div>
@@ -184,7 +269,12 @@ const Work = () => {
                 spaceBetween={30}
                 slidesPerView={1}
                 className="xl:h-[520px]  "
+                autoplay={{
+                  delay: 2500,
+                  disableOnInteraction: false,
+                }}
                 onSlideChange={handleSlideChange}
+                modules={[Autoplay]}
               >
                 {projects.map((project, index) => {
                   return (
