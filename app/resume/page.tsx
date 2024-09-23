@@ -4,6 +4,8 @@ import { FaHtml5, FaCss3, FaJs, FaReact, FaNodeJs } from "react-icons/fa";
 
 import { SiTailwindcss, SiNextdotjs } from "react-icons/si";
 
+import { BiLogoBlender } from "react-icons/bi";
+
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 import {
@@ -21,28 +23,28 @@ import { title } from "process";
 //Our data on cv
 const personalInformation = {
   //Description About Me
-  tittle: "Profile",
+  tittle: "Perfil",
   description:
     "Ingeniero en Informática con un año de sólida experiencia en el medio de IT, enfocado en el desarrollo de soluciones innovadoras y eficientes. Mi pasión por la tecnología y mi compromiso con la excelencia me impulsan a buscar constantemente oportunidades para crecer profesionalmente y aportar valor en cada proyecto en el que participo.",
   info: [
     {
-      fieldName: "Name",
+      fieldName: "Nombre",
       fieldValue: "David Imbaquingo",
     },
     {
-      fieldName: "Phone",
+      fieldName: "Móvil",
       fieldValue: "+593 992651613",
     },
     {
-      fieldName: "Experience",
-      fieldValue: "+1 Years",
+      fieldName: "Experiencia",
+      fieldValue: "2 Years",
     },
     {
-      fieldName: "Nacionality",
+      fieldName: "Nacionalidad",
       fieldValue: "Ecuadorian",
     },
     {
-      fieldName: "Languajes",
+      fieldName: "Idiomas",
       fieldValue: "Spanish, English",
     },
     {
@@ -50,8 +52,8 @@ const personalInformation = {
       fieldValue: "imbaquingojefferson60@gmail.com",
     },
     {
-      fieldName: "Job",
-      fieldValue: "Avaliable",
+      fieldName: "Trabajo",
+      fieldValue: "Disponible ",
     },
   ],
 };
@@ -59,7 +61,7 @@ const personalInformation = {
 //Experience data
 const experiences = {
   icon: "/assets/resume/badge.svg",
-  title: "My Experience",
+  title: "Mi Experiencia",
   description:
     "Soy un desarrollador web apasionado con experiencia en la creación de proyectos frontend. He trabajado en una variedad de proyectos que van desde sitios web informativos hasta aplicaciones web interactivas, utilizando tecnologías modernas para ofrecer soluciones eficientes y atractivas ",
     //Soy un desarrollador web apasionado con experiencia en la creación de proyectos frontend innovadores y funcionales. He trabajado en una variedad de proyectos que van desde sitios web informativos hasta aplicaciones web interactivas, utilizando tecnologías modernas para ofrecer soluciones eficientes y atractivas
@@ -85,7 +87,7 @@ const experiences = {
 // education section
 const education = {
   icon: "/assets/resume/cap.svg",
-  title: "My Education",
+  title: "Mi Educación",
   description:
     "",
   items: [
@@ -115,7 +117,7 @@ const education = {
 
 // skills section
 const skills = {
-  title: "My Skills",
+  title: "Mis Habilidades",
   description:
     "Mi pasión por la tecnología y mi compromiso con la excelencia me impulsan a seguir aprendiendo constantemente y buscar oportunidades para crecer profesionalmente.",
   skillList: [
@@ -139,6 +141,10 @@ const skills = {
       icon: <FaJs />,
       name: "Java Script",
     },
+    {
+      icon: <BiLogoBlender />,
+      name: "Blender",
+    },
   ],
 };
 
@@ -157,10 +163,10 @@ const Resume = () => {
         className="flex flex-col xl:flex-row gap-[60px]"
         >
           <TabsList className="flex flex-col w-full max-w-[380px] mx-auto xl:mx-0 gap-6">
-            <TabsTrigger value="experiences">Experience</TabsTrigger>
-            <TabsTrigger value="education">Education</TabsTrigger>
-            <TabsTrigger value="skills">Skill</TabsTrigger>
-            <TabsTrigger value="personalInformation">About Me</TabsTrigger>
+            <TabsTrigger value="experiences">Experiencia</TabsTrigger>
+            <TabsTrigger value="education">Educación</TabsTrigger>
+            <TabsTrigger value="skills">Habilidades</TabsTrigger>
+            <TabsTrigger value="personalInformation">Sobre Mí</TabsTrigger>
           </TabsList>
 
           {/* content */}
