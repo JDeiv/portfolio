@@ -38,19 +38,19 @@ const personalInformation = {
     },
     {
       fieldName: "Experiencia",
-      fieldValue: "2 Years",
+      fieldValue: "2 Años",
     },
     {
       fieldName: "Nacionalidad",
-      fieldValue: "Ecuadorian",
+      fieldValue: "Ecuatoriano",
     },
     {
       fieldName: "Idiomas",
-      fieldValue: "Spanish, English",
+      fieldValue: "Español, Inglés",
     },
     {
       fieldName: "Email",
-      fieldValue: "imbaquingojefferson60@gmail.com",
+      fieldValue: "jdavidimbaquingo@hotmail.com",
     },
     {
       fieldName: "Trabajo",
