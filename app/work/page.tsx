@@ -156,6 +156,38 @@ const projects = [
     images: "/assets/work/museo.jpg",
     live: "https://www.instagram.com/reel/DARiXk5p7it/?igsh=MXZsaHB6c2V1d253ZA==",
     github: "",
+  },
+  {
+    number: "05",
+    category: "Crud API Full Rest",
+    title: "Project 6",
+    description: "Desarrollo App Web con Python - React",
+    technologies: [
+      {
+        name: "Python",
+      },
+      {
+        name: "Django",
+      },
+      {
+        name: "React.js",
+      },
+      {
+        name: "Javascript",
+      },
+      {
+        name: "Tailwind",
+      },
+      {
+        name: "Github",
+      },
+      {
+        name: "Docker Desktop",
+      },
+    ],
+    images: "/assets/work/crudApi.jpg",
+    live: "",
+    github: "https://github.com/JDeiv/django-react",
   }
 ];
 
