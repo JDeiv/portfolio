@@ -186,7 +186,7 @@ const projects = [
       },
     ],
     images: "/assets/work/crudApi.jpg",
-    live: "",
+    live: "https://github.com/JDeiv/django-react",
     github: "https://github.com/JDeiv/django-react",
   }
 ];
